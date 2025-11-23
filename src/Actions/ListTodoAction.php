@@ -12,7 +12,7 @@ class ListTodoAction
     {
         $result = $this->handle();
 
-        if (! $result) {
+        if (is_null($result)) {
             http_response_code(403);
 
             return json_encode(['success' => false]);
