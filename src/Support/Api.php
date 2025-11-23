@@ -72,6 +72,11 @@ class Api
                     [...$this->getInput(), ...$this->getBody()]
                 ),
 
+            $this->isPatch()
+                && ! is_null($this->router['patch'] ?? null) => $this->router['patch'](
+                    [...$this->getInput(), ...$this->getBody()]
+                ),
+
             $this->isDelete()
                 && ! is_null($this->router['delete'] ?? null) => $this->router['delete'](
                     [...$this->getInput(), ...$this->getBody()]
