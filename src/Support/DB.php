@@ -2,6 +2,8 @@
 
 namespace App\Support;
 
+require_once __DIR__ . '/Config.php';
+
 use PDO;
 use Throwable;
 
@@ -43,6 +45,16 @@ class DB
         } catch (Throwable $th) {
             die('Database connection error: ' . $th->getMessage());
         }
+
+        return $this;
+    }
+
+    public function connect(): self
+    {
+        $db = static::getInstance()->getDatabaseName();
+        $pdo = static::getInstance()->getConnection();
+        
+        $pdo->exec("USE `{$db}`");
 
         return $this;
     }
@@ -173,12 +185,13 @@ class DB
 
     public function getConnection()
     {
+
         return $this->pdo;
     }
 
     public function getConfig(): array
     {
-        return parse_ini_file(__DIR__ . '/../../.env', true);
+        return Config::get();
     }
 
     public function getMigrations()
@@ -189,7 +202,7 @@ class DB
             array_diff(scandir($migrationsPath), ['.', '..'])
         );
     }
-    
+
     public function getSeeders()
     {
         $seedersPath = static::getInstance()->getSeedersDir();
@@ -198,22 +211,22 @@ class DB
             array_diff(scandir($seedersPath), ['.', '..'])
         );
     }
-    
+
     public function hasMigrations()
     {
         return count(static::getInstance()->getMigrations()) > 0;
     }
-    
+
     public function getMigrationDir()
     {
         return __DIR__ . '/../../database/migrations';
     }
-    
+
     public function hasSeeders()
     {
         return count(static::getInstance()->getSeeders()) > 0;
     }
-    
+
     public function getSeedersDir()
     {
         return __DIR__ . '/../../database/seeders';

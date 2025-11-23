@@ -12,7 +12,7 @@ class Model
 
     public function __construct()
     {
-        $this->pdo = DB::getInstance()->getConnection();
+        $this->pdo = DB::getInstance()->connect()->getConnection();
     }
 
     public function create(array $data)
@@ -22,9 +22,7 @@ class Model
         $values = implode(',', $placeholders);
         $stmt = $this->pdo->prepare("INSERT INTO {$this->table} ($columns) VALUES ($values)");
 
-        $stmt->execute(array_values($data));
-
-        return $this;
+        return $stmt->execute(array_values($data));
     }
 
     public function all(): array
