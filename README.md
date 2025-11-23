@@ -19,7 +19,7 @@ docker ps
 Para eliminar el contenedor (se eliminaran los datos)
 
 ```bash
-docker stop mysql-container && docker rm mysql-container
+docker stop mysql-container
 ```
 
 ## Instalación
