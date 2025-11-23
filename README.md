@@ -61,3 +61,13 @@ Para limpiar las tablas en la base ejecuta rollback
 ```bash
 php migrate-rollback.php
 ```
+
+```mermaid
+flowchart TB
+Api
+  --> Action:invoke
+  --> Action:handle
+  --> Model
+  --> DB
+  --> PDO
+```
