@@ -10,9 +10,9 @@ class Http {
     const response = await $.ajax({
       url: url,
       type: "GET",
+      dataType: "json",
       headers: this.headers,
       contentType: "application/json; charset=utf-8",
-      dataType: "json",
     });
 
     return response;
