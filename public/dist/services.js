@@ -21,11 +21,11 @@ class Http {
   post(url, data, onSuccess, onFail) {
     $.ajax({
       url: url,
-      data: JSON.stringify(data),
       type: "POST",
-      headers: this.headers,
-      contentType: "application/json; charset=utf-8",
       dataType: "json",
+      headers: this.headers,
+      data: JSON.stringify(data),
+      contentType: "application/json; charset=utf-8",
     })
       .done(onSuccess)
       .fail(onFail);
@@ -34,9 +34,11 @@ class Http {
   patch(url, data, onSuccess, onFail) {
     $.ajax({
       url: url,
-      data: data,
       type: "PATCH",
+      dataType: "json",
       headers: this.headers,
+      data: JSON.stringify(data),
+      contentType: "application/json; charset=utf-8",
     })
       .done(onSuccess)
       .fail(onFail);
