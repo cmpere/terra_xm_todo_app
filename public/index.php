@@ -1,7 +1,6 @@
 <?php
 
-require_once __DIR__.'/../src/Models/Todo.php';
-require_once __DIR__.'/../src/helpers.php'; ?>
+require_once __DIR__.'/../src/Models/Todo.php'; ?>
 
 <!DOCTYPE html>
 <html lang="es">
