@@ -1,20 +1,20 @@
-$(async function () {
-  state = {
-    common: {
-      modal: {
-        settings: {
-          autoOpen: false,
-          resizable: false,
-          height: "auto",
-          width: 400,
-          modal: true,
-        },
+let state = {
+  common: {
+    modal: {
+      settings: {
+        autoOpen: false,
+        resizable: false,
+        height: "auto",
+        width: 400,
+        modal: true,
       },
     },
-    info: { data: {} },
-    list: { data: [] },
-  };
+  },
+  info: { data: {} },
+  list: { data: [] },
+};
 
+$(async function () {
   const list = async () => {
     const { data } = await new Todo(new Http()).get();
     state.list.data = data;
@@ -28,7 +28,7 @@ $(async function () {
       { task_name: $("#task_name").val() },
       async function () {
         $("div.success")
-          .text("Success delete")
+          .text("Tarea creada")
           .show()
           .delay(1500)
           .fadeOut("slow");
@@ -38,7 +38,7 @@ $(async function () {
       },
       function () {
         $("div.error")
-          .text("Success delete")
+          .text("Ocurrio un error")
           .show()
           .delay(4000)
           .fadeOut("slow");
@@ -77,7 +77,11 @@ $(async function () {
         await list();
       },
       function () {
-        $("div.error").text("Error delete").show().delay(4000).fadeOut("slow");
+        $("div.error")
+          .text("Ocurrio un error")
+          .show()
+          .delay(4000)
+          .fadeOut("slow");
       }
     );
   };
