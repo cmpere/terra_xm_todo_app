@@ -1,0 +1,8 @@
+<div class="border-b border-slate-300 p-4 flex items-center h-24">
+    <input type="text" placeholder="Nueva tarea..." autofocus name="task_name" id="task_name" class="w-full text-lg outline-none px-2 py-4 " />
+    <button class="btn add hover:bg-terra/70 bg-terra cursor-pointer rounded-lg p-4">
+        <div class="flex items-center justify-center gap-4">
+            <i data-lucide="plus" class="text-slate-900"></i>
+        </div>
+    </button>
+</div>
