@@ -22,7 +22,7 @@ Para eliminar el contenedor (se eliminaran los datos)
 docker stop mysql-container && docker rm mysql-container
 ```
 
-## Instalacion
+## Instalación
 
 1. Clonar y entrar al proyecto
 
@@ -36,16 +36,16 @@ git clone https://github.com/cmpere/terra_xm_todo_app.git && cd terra_xm_todo_ap
 cp .env-example .env
 ```
 
-3. Crea base de datos si no existe y corre las migraciones
+3. Correr la migracion: crea base de datos si no existe y las tablas.
 
 ```bash
 php migrate.php
 ```
 
-4. Llenar los datos de prueba
+4. Llenar la tabla con los datos de prueba
 
 ```bash
-migrate-seed.php
+php migrate-seed.php
 ```
 
 5. Iniciar aplicacion
