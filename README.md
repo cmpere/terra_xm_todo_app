@@ -111,7 +111,7 @@ Api
 # Tarea Extra: Diseño Responsivo
 
 - ~~● Haz que la aplicación de la Lista de Tareas sea responsiva usando CSS (Flexbox o Grid).~~ **Uso de tailwind** [resources/partials/head.php](resources/partials/head.php)
-- ~~● Asegúrate de que la aplicación funcione bien tanto en dispositivos móviles como en ordenadores de escritorio.~~ **Se aplica una configuracion repsonsiva con el breakpoint del viewport y un diseño generico con adaptando el largo de la lista al dispositivo** [resources/partials/list.php](resources/partials/list.php)
+- ~~● Asegúrate de que la aplicación funcione bien tanto en dispositivos móviles como en ordenadores de escritorio.~~ **Se aplica una configuracion responsiva con el breakpoint del viewport y un diseño generico con adaptando el largo de la lista al dispositivo** [resources/partials/list.php](resources/partials/list.php)
 
 # Entregables:
 
