@@ -25,7 +25,7 @@ $(async function () {
       },
       function () {
         $("div.error")
-          .text("Success delete")
+          .text("Ocurrio un error")
           .show()
           .delay(4000)
           .fadeOut("slow");
