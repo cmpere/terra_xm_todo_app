@@ -1,0 +1,1 @@
+<img class="h-16 my-8" src="https://www.terraenergy.mx/images/terra-logo.svg" alt="">
