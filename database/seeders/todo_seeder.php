@@ -1,6 +1,6 @@
 <?php
 
-use Models\Todo;
+use App\Models\Todo;
 
 require_once __DIR__.'/../../src/Support/DB.php';
 require_once __DIR__.'/../../src/Models/Todo.php';
