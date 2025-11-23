@@ -3,7 +3,7 @@
 ## Requerimientos
 
 - PHP >= 8.4.11
-- Base de datos mysql
+- Mysql >= 8.0
   - Si no se tiene un mysql local y se tiene docker instalado se puede usar e instalar la base de datos con
 
 ```bash
