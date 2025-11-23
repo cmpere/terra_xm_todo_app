@@ -1,10 +1,10 @@
 <?php
 
 require_once __DIR__.'/../src/Support/Api.php';
-require_once __DIR__.'/../src/Actions/DestroyTodoAction.php';
-require_once __DIR__.'/../src/Actions/UpdateTodoAction.php';
-require_once __DIR__.'/../src/Actions/StoreTodoAction.php';
 require_once __DIR__.'/../src/Actions/ListTodoAction.php';
+require_once __DIR__.'/../src/Actions/StoreTodoAction.php';
+require_once __DIR__.'/../src/Actions/UpdateTodoAction.php';
+require_once __DIR__.'/../src/Actions/DestroyTodoAction.php';
 
 use App\Actions\DestroyTodoAction;
 use App\Actions\ListTodoAction;
